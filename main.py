@@ -1,6 +1,29 @@
 import helpers
 import copy
 
+"""
+qui abbiamo la classe principale:
+vengono inizializzati gli operatori che contengono il risultato delle operazioni e poi
+viene generata tramite initialqueue la lista di numeri, che poi copio subito come deepcopy 
+per il numero di operazioni in modo che ogni operando acceda ad una lista separata 
+in fase di pop mentre svolge i calcoli (altrimenti il primo operatore svuoterebbe la lista
+per tutti).
+
+operandthread svolge l'operazione di ottenimento numero dalla lista e lo da in pasto 
+all'operatore che aggiorna il totale interno e poi finita la lista ritorna il risultato
+essendo che operandthread non dipende da parametri self l'ho dichiarato come metodo statico
+anche se in questa implementazione specifica non è necessario.
+
+le due funzioni dothework implementano la business logic con e senza threading:
+- stampa lista dei numeri
+- stampa risultato somma
+- stampa risultato moltiplicazione
+- stampa risultato somma dei quadrati
+
+l'applicazione come main lancia un ciclo di calcolo con threading e stampa il risultato,
+nel file di tests vengono invocate entrambe le funzioni con un timeit per il confronto
+dei tempi di esecuzione.
+"""
 
 class ThreadOperands:
 
