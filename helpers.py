@@ -1,11 +1,17 @@
 import concurrent.futures
 import random
+import collections
 
+""" 
+classe che genera la lista di numeri, ho scelto una deque per garantire migliori
+tempi di accesso in caso di grandi numeri o implementazioni future sulla logica di
+threading
+"""
 
 class NumberList:
 
     def __init__(self, length, minimum, maximum):
-        self.itemlist = [random.randint(minimum, maximum) for i in range(length)]
+        self.itemlist = collections.deque([random.randint(minimum, maximum) for i in range(length)])
 
     def __str__(self):
         return f"la lista è: {', '.join([str(x) for x in self.itemlist])}"
