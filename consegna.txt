@@ -1,0 +1,14 @@
+Scrivere un programma Python eseguibile da riga di comando che generi una lista di 20 numeri casuali tra 1 e 5 e stampi in output la lista, la somma dei numeri della lista, la moltiplicazione dei numeri della lista, e la somma dei quadrati degli elementi della lista.
+
+Ad esempio, data la lista [2, 4, 3, 1, 5, 4] (per semplicità in questo esempio la lista è lunga 6 invece di 20), vorremmo in output:
+
+La lista è: 2, 4, 3, 1, 5, 4
+La somma è: 19
+Il prodotto è: 480
+Le somma dei quadrati è : 71
+
+Ogni funzionalità (somma, prodotto, somma dei quadrati) dovrà essere calcolata impiegando tre threads per ogni operazione.
+Si raccomanda di porre particolare attenzione alla progettazione, cioè alla definizione delle classi e dei metodi necessari,  aggiungendo commenti al codice scritto.
+
+
+
